@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Content.aspx" title="综合测评管理系统" roles="*">
+    <siteMapNode url="" title="个人信息维护" roles="*">
+      <siteMapNode url="~/WebForms/Common/ChangePassword.aspx" title="修改登录密码" roles="*"/>
+      <siteMapNode url="~/WebForms/Common/PersonalInfo.aspx" title="修改用户个人信息" roles="*"/>
+    </siteMapNode>
+    <siteMapNode url="" title="管理员任务" roles="管理员,超级管理员">
+      <siteMapNode url="" title="学生信息管理" roles="管理员">
+        <siteMapNode url="~/WebForms/Admin/ImportStudent.aspx" title="导入学生信息" roles="管理员"/>
+        <siteMapNode url="~/WebForms/Admin/InSchoolStudentMng.aspx" title="在校学生信息维护" roles="管理员"/>
+        <siteMapNode url="~/WebForms/Admin/GraduateStudentMng.aspx" title="毕业学生信息维护" roles="管理员"/>
+      </siteMapNode>
+      <siteMapNode url="" title="登陆账户管理" roles="管理员">
+        <siteMapNode url="~/WebForms/Admin/BranchMng.aspx" title="部门管理" roles="管理员"/>
+        <siteMapNode url="~/WebForms/Admin/TeacherMng.aspx" title="教师账户管理" roles="管理员"/>
+        <siteMapNode url="~/WebForms/Admin/AdminMng.aspx" title="管理员账户管理" roles="管理员"/>
+        <siteMapNode url="~/WebForms/Admin/CollegeAdminMng.aspx" title="学院管理员账户管理" roles="管理员"/>
+
+      </siteMapNode>
+      <siteMapNode url="" title="基础数据管理" roles="管理员">
+        <siteMapNode url="~/WebForms/Admin/ScoreSetup.aspx" title="综测分值设置" roles="管理员" />
+      </siteMapNode>
+      <!--<siteMapNode url="" title="数据审核" roles="管理员">
+         <siteMapNode url="~/WebForms/Admin/AuditAchievementByProject.aspx" title="成果审核【按项目】" roles="管理员"/>
+        <siteMapNode url="~/WebForms/Admin/AchievementToAuditByStudent.aspx" title="成果审核【按学生】" roles="管理员"/>
+        <siteMapNode url="~/WebForms/Admin/GraduationAudit.aspx" title="毕业审核" roles="管理员"/>
+      </siteMapNode>
+      <siteMapNode url="" title="成果检索" roles="管理员">
+        <siteMapNode url="~/WebForms/Admin/CreditSearch.aspx" title="成果检索" roles="管理员"/>
+      </siteMapNode>-->
+      <siteMapNode url="" title="新闻、下载管理" roles="管理员">
+        <siteMapNode url="~/WebForms/Admin/ReleaseInformation.aspx" title="新闻发布管理" roles="管理员" />
+        <siteMapNode url="~/WebForms/Admin/ReleaseDownloads.aspx" title="下载资源发布" roles="管理员" />
+      </siteMapNode>
+      <siteMapNode url="" title="系统管理" roles="管理员,超级管理员">
+        <siteMapNode url="~/WebForms/SuperAdmin/RolesMng.aspx" title="角色管理" roles="超级管理员" />
+        <siteMapNode url="~/WebForms/Admin/SystemSetttings.aspx" title="系统参数设置" roles="管理员" />
+        <siteMapNode url="~/WebForms/Admin/BackgroundJobs.aspx" title="后台工作管理" roles="管理员" />
+        <siteMapNode url="~/WebForms/Admin/BackupDB.aspx" title="备份数据库" roles="管理员" />
+        <siteMapNode url="~/WebForms/Admin/ExecuteSql.aspx" title="执行 SQL 命令" roles="管理员" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="" title="学院管理员任务" roles="学院管理员">
+      <siteMapNode url="" title="登陆账户管理" roles="学院管理员">
+        <siteMapNode url="~/WebForms/CollegeAdmin/StudentMng.aspx" title="学生账户管理" roles="学院管理员"/>
+        <siteMapNode url="~/WebForms/CollegeAdmin/TeacherMng.aspx" title="教师账户管理" roles="学院管理员"/>
+        <siteMapNode url="~/WebForms/CollegeAdmin/ClassAdminMng.aspx" title="班级管理员账户管理" roles="学员管理员"/>
+      </siteMapNode>
+      <!--<siteMapNode url="" title="讲座管理" roles="学院管理员">
+        <siteMapNode url="~/WebForms/CommonAdmin/LectureMng.aspx?mode=college" title="讲座管理" roles="学院管理员"/>
+        <siteMapNode url="~/WebForms/CommonAdmin/LectureMarkMng.aspx?mode=college" title="登记讲座成绩" roles="学院管理员"/>
+      </siteMapNode>-->
+      <siteMapNode url="" title="制定规则" roles="学院管理员">
+        <siteMapNode url="~/WebForms/CollegeAdmin/MakeRules.aspx" title="制定规则" roles="学院管理员"/>
+      </siteMapNode>
+      <siteMapNode url="" title="数据审核" roles="学院管理员">
+        <siteMapNode url="~/WebForms/CollegeAdmin/AchievementToAuditByType.aspx" title="成果审核【按类别】" roles="学院管理员"/>
+        <siteMapNode url="~/WebForms/CollegeAdmin/AchievementToAuditByStudent.aspx" title="成果审核【按学生】" roles="学院管理员"/>
+      </siteMapNode>
+      <siteMapNode url="" title="成果检索" roles="学院管理员">
+        <siteMapNode url="~/WebForms/CollegeAdmin/CollegeCreditSearch.aspx" title="成果检索" roles="学院管理员"/>
+        <siteMapNode url="~/WebForms/CollegeAdmin/CollegeComprehensiveSearch.aspx" title="综测成绩查询" roles="学院管理员"/>
+      </siteMapNode>
+      <siteMapNode url="" title="批量数据导入" roles="学院管理员">
+        <siteMapNode url="~/WebForms/CollegeAdmin/CompetitionImport.aspx" title="竞赛成绩导入与查询" roles="学院管理员"/>
+        <siteMapNode url="~/WebForms/CollegeAdmin/InnovativeProjectImport.aspx" title="创新创业项目导入与查询" roles="学院管理员"/>
+        <siteMapNode url="~/WebForms/CollegeAdmin/CertificateImport.aspx" title="认证考试成绩导入与查询" roles="学院管理员"/>
+        <siteMapNode url="~/WebFomrs/CollegeAdmin/ExaminationImport.aspx" title="科学文化素质分数导入与查询" roles="学院管理员"/>
+        <siteMapNode url="~/WebForms/CollegeAdmin/ThesisImport.aspx" title="论文导入与查询" roles="学院管理员" />
+        <siteMapNode url="~/WebForms/CollegeAdmin/ResearchProjectImport.aspx" title="科研项目导入与查询" roles="学院管理员" />
+        <siteMapNode url="~/WebForms/CollegeAdmin/PatentImport.aspx" title="专利导入与查询" roles="学院管理员" />
+        <siteMapNode url="~/WebForms/CollegeAdmin/CopyrightImport.aspx" title="软件著作权导入与查询" roles="学院管理员" />
+        <siteMapNode url="~/WebForms/CollegeAdmin/AwardImport.aspx" title="成果获奖导入与查询" roles="学院管理员" />
+      </siteMapNode>
+      <!--
+      <siteMapNode url="" title="毕业审核" roles="学院管理员">
+        <siteMapNode url="~/WebForms/CollegeAdmin/CollegeGraduationAudit.aspx" title="毕业审核" roles="学院管理员"/>
+      </siteMapNode>
+      -->
+    </siteMapNode>
+    <!--
+    <siteMapNode url="" title="部门管理员任务" roles="部门管理员">
+      <siteMapNode url="" title="讲座管理" roles="部门管理员">
+        <siteMapNode url="~/WebForms/CommonAdmin/LectureMng.aspx?mode=branch" title="讲座管理" roles="部门管理员"/>
+        <siteMapNode url="~/WebForms/CommonAdmin/LectureMarkMng.aspx?mode=branch" title="登记讲座成绩" roles="部门管理员"/>
+      </siteMapNode>
+    <siteMapNode url="" title="批量数据导入" roles="部门管理员">
+      <siteMapNode url="~/WebForms/BranchAdmin/CompetitionImport.aspx" title="竞赛成绩导入与查询" roles="部门管理员"/>
+      <siteMapNode url="~/WebForms/BranchAdmin/InnovativeProjectImport.aspx" title="创新创业项目导入与查询" roles="部门管理员"/>
+      <siteMapNode url="~/WebForms/BranchAdmin/CertificateImport.aspx" title="认证考试成绩导入与查询" roles="部门管理员"/>
+    </siteMapNode>
+    <siteMapNode url="" title="数据审核" roles="部门管理员">
+      <siteMapNode url="~/WebForms/BranchAdmin/AchievementToAudit.aspx" title="成果审核【按年份】" roles="部门管理员"/>
+      <siteMapNode url="~/WebForms/BranchAdmin/AchievementToAuditByType.aspx" title="成果审核【按项目】" roles="部门管理员"/>
+      <siteMapNode url="~/WebForms/BranchAdmin/AchievementToAuditByStudent.aspx" title="成果审核【按学生】" roles="部门管理员"/>
+    </siteMapNode>
+  </siteMapNode>
+    -->
+    <siteMapNode url="" title="班级管理员任务" roles="班级管理员">
+      <siteMapNode url="" title="数据审核" roles="班级管理员">
+        <siteMapNode url="~/WebForms/ClassAdmin/AchievementToAuditByType.aspx" title="成果审核【按项目】" roles="班级管理员"/>
+        <siteMapNode url="~/WebForms/ClassAdmin/AchievementToAuditByStudent.aspx" title="成果审核【按学生】" roles="班级管理员"/>
+      </siteMapNode>
+      <siteMapNode url="" title="基础性素质分数录入" roles="班级管理员">
+        <siteMapNode url="~/WebForms/ClassAdmin/MoralEducation.aspx" title="思想品德素质录入与查询" roles="班级管理员" />
+        <siteMapNode url="~/WebForms/ClassAdmin/BodyMindQuality.aspx" title="身心素质录入与查询" roles ="班级管理员"/>
+        <siteMapNode url="~/WebForms/CollegeAdmin/ClassComprehensiveSearch.aspx" title="综测成绩查询" roles="班级管理员"/>
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode url="" title="成果管理" roles="学生">
+      <siteMapNode url="~/WebForms/Student/AchievementMng.aspx?AchievementType=RecreationSport" title="文体竞赛项目录入" roles="学生" />
+      <siteMapNode url="~/WebForms/Student/AchievementMng.aspx?AchievementType=SocialWorkProject" title="社会工作项目录入" roles="学生" />
+      <siteMapNode url="~/WebForms/Student/AchievementSelect.aspx" title="成果查询" roles="学生" />
+      <siteMapNode url="~/WebForms/CollegeAdmin/StudentComprehensiveSearch.aspx" title="综测成绩查询" roles="学生"/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

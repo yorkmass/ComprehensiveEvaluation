@@ -1,0 +1,24 @@
+D:\学生综测管理系统\ComprehensiveEvaluation1\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+D:\学生综测管理系统\ComprehensiveEvaluation1\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+D:\学生综测管理系统\ComprehensiveEvaluation1\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+D:\学生综测管理系统\ComprehensiveEvaluation1\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+D:\学生综测管理系统\ComprehensiveEvaluation1\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+D:\学生综测管理系统\ComprehensiveEvaluation1\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+F:\学生综合测评\ComprehensiveEvaluation\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+F:\学生综合测评\ComprehensiveEvaluation\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+F:\学生综合测评\ComprehensiveEvaluation\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+F:\学生综合测评\ComprehensiveEvaluation\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+F:\学生综合测评\ComprehensiveEvaluation\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+F:\学生综合测评\ComprehensiveEvaluation\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb

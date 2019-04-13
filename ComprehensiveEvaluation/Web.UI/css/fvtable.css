@@ -1,0 +1,19 @@
+﻿.fvtable {
+    border-collapse: collapse;
+}
+
+.fvrow {
+    line-height: 28px;
+}
+
+    .fvrow > td {
+        padding: 2px;
+    }
+
+        .fvrow > td.item-name {
+            text-align: right;
+        }
+
+.fvtable .input {
+    width: 210px;
+}
