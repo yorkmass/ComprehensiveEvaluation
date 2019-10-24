@@ -22,3 +22,39 @@ C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并�
 C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
 C:\Users\moyu\Desktop\ComprehensiveEvaluation (2)\V1.1完成了common模块并优化了登录\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\Administrator\Desktop\V1.2完成了班级管理员和学生\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\Administrator\Desktop\V1.2完成了班级管理员和学生\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\Administrator\Desktop\V1.2完成了班级管理员和学生\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\V1.2完成了班级管理员和学生\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\V1.2完成了班级管理员和学生\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\Administrator\Desktop\V1.2完成了班级管理员和学生\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\moyu\Desktop\大创答辩修改\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\moyu\Desktop\大创答辩修改\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\moyu\Desktop\大创答辩修改\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+C:\Users\moyu\Desktop\大创答辩修改\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\moyu\Desktop\大创答辩修改\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\moyu\Desktop\大创答辩修改\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\Administrator\Desktop\半完成\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\Administrator\Desktop\半完成\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\Administrator\Desktop\半完成\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\半完成\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\半完成\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\Administrator\Desktop\半完成\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+F:\学生综合测评\V2.0 已完成（答辩用）\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+F:\学生综合测评\V2.0 已完成（答辩用）\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+F:\学生综合测评\V2.0 已完成（答辩用）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+F:\学生综合测评\V2.0 已完成（答辩用）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+F:\学生综合测评\V2.0 已完成（答辩用）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+F:\学生综合测评\V2.0 已完成（答辩用）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\Administrator\Desktop\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\Administrator\Desktop\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\Administrator\Desktop\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\Administrator\Desktop\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb
+G:\最终（增加了图表统计并修改了登录界面）\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.dll
+G:\最终（增加了图表统计并修改了登录界面）\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\bin\Debug\Infrastructure.pdb
+G:\最终（增加了图表统计并修改了登录界面）\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csprojAssemblyReference.cache
+G:\最终（增加了图表统计并修改了登录界面）\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.csproj.CoreCompileInputs.cache
+G:\最终（增加了图表统计并修改了登录界面）\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.dll
+G:\最终（增加了图表统计并修改了登录界面）\V2.1答辩用（最终版）\ComprehensiveEvaluation\Infrastructure\obj\Debug\Infrastructure.pdb

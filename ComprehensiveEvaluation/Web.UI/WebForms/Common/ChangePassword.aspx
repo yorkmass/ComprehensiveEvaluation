@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ChangePassword.aspx.cs" Inherits="WebForms_Common_ChangePassword" %>
-
+<%@ Register Src="../../script/MessageBoxControl.ascx" TagName="MessageBoxControl" TagPrefix="uc1" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,7 +8,7 @@
     <title></title>
     <style>
 .location{
-    margin-left:150px;
+    margin-left:140px;
     margin-top:20px;
 }
 .left{
@@ -28,12 +28,12 @@
 }
     </style>
      
-  
+ <link href="../../css/style.css" rel="stylesheet" /> 
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="location">
-            <asp:Label ID="Label1" runat="server"  Text="修改密码"></asp:Label>
+            <h2><asp:Label ID="Label1" runat="server"  Text="修改密码"></asp:Label></h2>
         </div>
         <div>
             <div class="left">
@@ -58,7 +58,7 @@
             </div>
         </div>
        
-            
+      <uc1:MessageBoxControl ID="MsgBox" runat="server" />      
        
     </form>
 </body>

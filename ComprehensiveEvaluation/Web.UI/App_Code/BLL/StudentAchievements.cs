@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -29,7 +30,7 @@ public class StudentAchievements
         return score;
     }
     ///向成果表里面添加数据
-    public void AddInfoToAchievement(string sno, string achievementID, string semester, DateTime obtainDate, string auditStatus, string achievementType, string ruleID, string title)
+    public void AddInfoToAchievement(string sno, string achievementID, string semester, DateTime obtainDate, string auditStatus, string achievementType, string ruleID, string title,string pathName)
     {
         DSStudentAchievementsTableAdapters.StudentAchievementTableAdapter helper = new DSStudentAchievementsTableAdapters.StudentAchievementTableAdapter();
         DSStudentAchievements.StudentAchievementDataTable table = new DSStudentAchievements.StudentAchievementDataTable();
@@ -42,12 +43,14 @@ public class StudentAchievements
                 a = false;
                 string achievement = table.Rows[i]["AchievementID"].ToString();
                 helper.UpdateAchievement(semester, obtainDate, auditStatus, achievementType,title, achievement);
+                UpdateFiles(achievement, pathName);
             }            
 
         }
         if (a)
         {
             helper.InsertAchievement(achievementID, semester, obtainDate, auditStatus, achievementType, title);
+            AddFiles(achievementID, pathName);
         }
        
 
@@ -84,25 +87,25 @@ public class StudentAchievements
         DSStudentAchievementsTableAdapters.StudentAchievementTableAdapter helper1 = new DSStudentAchievementsTableAdapters.StudentAchievementTableAdapter();
         DSStudentAchievements.StudentAchievementDataTable table1 = new DSStudentAchievements.StudentAchievementDataTable();
         helper1.Fill(table1,sno);
-        helper.Fill(table, achievementID);
         bool a = true;
         for (int i = 0; i < table1.Count; i++)
         {
-            if (GainParentRuleID(table1.Rows[i]["RuleID"].ToString()) == "F4")
+            if (GainParentRuleID(table1.Rows[i]["RuleID"].ToString()) == "F4" )
             {
-                a = false;
                 string achievement = table1.Rows[i]["AchievementID"].ToString();
-                helper.UpdateScoiaWork(organization, poitionTtype, achievement);
-                
+                helper.Fill(table, achievement);
+                if (table.Count != 0)
+                {
+                    a = false;
+                    helper.UpdateScoiaWork(organization, poitionTtype, achievement);
+                }                               
             }
 
         }
         if (a)
         {
             helper.InsertSocialWorkProject(achievementID, organization, poitionTtype);
-        }
-
-            
+        }             
         
     }
     ///获得当前学期
@@ -140,19 +143,20 @@ public class StudentAchievements
         string ruleName = table.Rows[0]["RuleName"].ToString();
         return ruleName;
     }
-    ///根据成果ID删除成果信息
+    ///根据成果AchievementID删除成果信息
     public void DelectAchievement(string achievementID)
     {
         DSStudentAchievementsTableAdapters.SocialWorkProjectTableAdapter helper1 = new DSStudentAchievementsTableAdapters.SocialWorkProjectTableAdapter();
         DSStudentAchievementsTableAdapters.StudentAchievementTableAdapter helper = new DSStudentAchievementsTableAdapters.StudentAchievementTableAdapter();
         helper.DeleteStudentAchievement(achievementID);
         helper1.DeleteSocialWork(achievementID);
-        helper.DeleteAchievement(achievementID);
+        DelectFiles(achievementID);
+        helper.DeleteAchievement(achievementID);  
     }
     ///向3个表里面添加成果信息
-    public void AddAchievement(string sno, string achievementID, string semester, DateTime obtainDate, string auditStatus, string achievementType, string ruleID, string title,double mark, string organization, string poitionType)
+    public void AddAchievement(string sno, string achievementID, string semester, DateTime obtainDate, string auditStatus, string achievementType, string ruleID, string title,double mark, string organization, string poitionType,string pathName)
     {
-        AddInfoToAchievement(sno, achievementID, semester, obtainDate, auditStatus, achievementType, ruleID, title);
+        AddInfoToAchievement(sno, achievementID, semester, obtainDate, auditStatus, achievementType, ruleID, title,pathName);
         AddInfoToStudentAchievement(sno, ruleID, mark, semester, achievementID);
         AddSocialWork(achievementID,organization,poitionType,sno);
     }
@@ -173,7 +177,7 @@ public class StudentAchievements
         {
             if ((table.Rows[i]["Semester"].ToString() == semester) && (GainParentRuleID(table.Rows[i]["RuleID"].ToString())=="F4"))
             {
-                if (table.Rows[i]["AuditStatus"].ToString() == "已审核")
+                if (table.Rows[i]["AuditStatus"].ToString() == "已审核" || table.Rows[i]["AuditStatus"].ToString() == "初审通过")
                 {
                     status = true;
                 }
@@ -184,7 +188,35 @@ public class StudentAchievements
             }
         }
         return status;
-
+    }
+    ///删除附件信息
+    public void DelectFiles(string achievementID)
+    {
+        DSFilesTableAdapters.AttachmentTableAdapter helper = new DSFilesTableAdapters.AttachmentTableAdapter();
+        DSFiles.AttachmentDataTable table=helper.GetData(achievementID);
+        string attachmentID=table.Rows[0]["AttachmentID"].ToString();
+        helper.DeleteFiles(attachmentID);
+    }
+    ///添加附件信息
+    public void AddFiles(string achievementID,string attachName)
+    {
+        string attachID = Guid.NewGuid().ToString();
+        string attachPath = "..\\..\\FilesUser";
+        DSFilesTableAdapters.AttachmentTableAdapter helper = new DSFilesTableAdapters.AttachmentTableAdapter();
+        helper.InsertFile(attachID, achievementID, attachName, attachPath);
+    }
+    ///更新附件信息
+    public void UpdateFiles(string achievementID,string pathName)
+    {
+        string path = "..\\..\\FilesUser";
+        DSFilesTableAdapters.AttachmentTableAdapter helper = new DSFilesTableAdapters.AttachmentTableAdapter();
+        helper.UpdateFiles(pathName, path,achievementID);
+    }
+    public string FilesName(string achievementID)
+    {
+        DSFilesTableAdapters.AttachmentTableAdapter helper = new DSFilesTableAdapters.AttachmentTableAdapter();
+        DSFiles.AttachmentDataTable table = helper.GetData(achievementID);
+        return table.Rows[0]["AttachName"].ToString();
     }
 
 }

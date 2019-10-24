@@ -10,5 +10,22 @@ public partial class WebForms_Student_StudentComprehensiveSearch : System.Web.UI
     protected void Page_Load(object sender, EventArgs e)
     {
 
+    }    
+    
+
+    protected void btnSearch0_Click1(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void mnuMain_ItemClick1(object source, DevExpress.Web.MenuItemEventArgs e)
+    {
+        switch (e.Item.Name)
+        {
+            case "导出":
+                gvData.DataBind();
+                this.gvExport.WriteXlsToResponse("综测成绩");
+                break;
+        }
     }
 }

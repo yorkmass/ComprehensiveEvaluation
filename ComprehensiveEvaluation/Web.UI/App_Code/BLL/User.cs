@@ -21,25 +21,32 @@ public class User
     /// <param name="username"></param>
     /// <param name="password"></param>
     /// <returns></returns>
-    public bool AuthenticateUser(string username, string password, out string userId)
+    public bool AuthenticateUser(string username, string password, out string userId, out string BranchName)
     {
         DSUsersTableAdapters.UsersTableAdapter helper = new DSUsersTableAdapters.UsersTableAdapter();
-        DSUsers.UsersDataTable table = new DSUsers.UsersDataTable();
-        
-    
-
+        DSUsers.UsersDataTable table = new DSUsers.UsersDataTable();    
         helper.Fill(table, password, username);
+
+        DSUsersTableAdapters.BranchUsersTableAdapter branchUsersHelp = new DSUsersTableAdapters.BranchUsersTableAdapter();
+        DSUsers.BranchUsersDataTable branchUsersTable = new DSUsers.BranchUsersDataTable();
+
         // 如果查询出来的密码匹配， 则验证通过
         //之前写的是：table.Rows.Count == 0 这个会出现大小写无法区分问题
-        if (password!=table.Rows[0]["Password"].ToString()) 
+        if (table.Rows.Count == 0 || password != table.Rows[0]["Password"].ToString()) 
         {
             
             userId = "";
+            BranchName = "";
             return false;
         }
         else
         {
             userId = table.Rows[0]["UserId"].ToString();
+            branchUsersHelp.Fill(branchUsersTable, userId);
+            if (branchUsersTable.Rows.Count == 0)
+                BranchName = "";
+            else
+                BranchName = branchUsersTable.Rows[0]["BranchName"].ToString();
             return true;
         }
     }

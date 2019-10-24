@@ -31,7 +31,7 @@ public partial class WebForms_Common_ChangePassword : System.Web.UI.Page
                     {
                     if (TextBox2.Text.Length < 8)
                     {
-                        Response.Write("<script>alert('密码必须在8-15字符之间！')</script>");
+                        MsgBox.ShowMessage("密码必须在8-15字符之间！");
                         TextBox1.Text = "";
                         TextBox2.Text = "";
                         TextBox3.Text = "";
@@ -40,7 +40,7 @@ public partial class WebForms_Common_ChangePassword : System.Web.UI.Page
                     else
                     {
                         changeinfo.ChangePassword(newPassword, userCode);
-                        Response.Write("<script>alert('修改成功！')</script>");
+                        MsgBox.ShowMessage("修改成功！");
                         TextBox1.Text = "";
                         TextBox2.Text = "";
                         TextBox3.Text = "";

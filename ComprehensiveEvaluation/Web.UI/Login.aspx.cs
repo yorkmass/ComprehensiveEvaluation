@@ -18,6 +18,7 @@ public partial class Login : System.Web.UI.Page
     {
         // 判断是否登陆成功
         string userCode = "";
+        string BranchName="";
         string userName = ((ASPxTextBox)Login1.FindControl("UserName")).Text;// 获得 前台空间的用户名值
         string password = ((ASPxTextBox)Login1.FindControl("Password")).Text; // 获得 密码栏的值
         bool rememberMe = ((CheckBox)Login1.FindControl("RememberMe")).Checked;
@@ -26,13 +27,14 @@ public partial class Login : System.Web.UI.Page
 
         User userService = new User();
         
-        if (!userService.AuthenticateUser(userName, password, out userCode))
+        if (!userService.AuthenticateUser(userName, password, out userCode, out BranchName))
         {
             ((Literal)Login1.FindControl("FailureText")).Text = "用户名密码错误 请重试";
             return;
         }
         else
         {
+            Session["BranchName"] = BranchName;
             Session["UserCode"] = userCode;  // 已变成参数的值(userid)
             FormsAuthentication.RedirectFromLoginPage(userCode,false);
         }

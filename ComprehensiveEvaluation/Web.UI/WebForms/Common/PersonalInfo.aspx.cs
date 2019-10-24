@@ -25,18 +25,18 @@ public partial class WebForms_Common_PersonalInfo : System.Web.UI.Page
         string tel = TelBox.Text;
         if (email == "" || tel == "")
         {
-            Response.Write("<script>alert('输入不能为空！')</script>");
+            MsgBox.ShowMessage("输入不能为空！");
         }
         else
         {
             if (tel.Length != 11)
             {
-               Response.Write("<script>alert('请输入11位的手机号')</script>");
+                MsgBox.ShowMessage("请输入11位的手机号！");
             }
             else
             {
                changeinfo.ChangeEmailAndTel(email, tel, userCode);
-               Response.Write("<script>alert('修改成功！')</script>");
+                MsgBox.ShowMessage("修改成功！");
             }           
         }
         EmailBox.Text = "";

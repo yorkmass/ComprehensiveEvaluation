@@ -31,7 +31,7 @@
             margin-top:20px;
            
         }
-    </style>
+        </style>
     <script type="text/javascript">
         $(function () {
             //-- 鼠标移过后亮条效果
@@ -92,7 +92,7 @@
 <body>
     <form id="form1" runat="server">
              <asp:ScriptManager ID="sm" runat="server">
-            </asp:ScriptManager> 
+            </asp:ScriptManager> <br />
         <h2>
             <asp:Label ID="lblTitle" runat="server" Text="社会工作加分"></asp:Label>
         </h2>
@@ -140,7 +140,6 @@
         <cc1:MyGridView ID="MyGridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="AchievementID" DataSourceID="ObjectDataSource1" EmptyDataText="没有检索到任何数据。" OnRowCommand="MyGridView1_RowCommand" CssClass="dataTable" ValidateRequestMode="Enabled" ViewStateMode="Enabled" >
              <AlternatingRowStyle CssClass="alternateRow"></AlternatingRowStyle>
             <Columns>
-                <asp:BoundField DataField="AchievementID" HeaderText="成果编号" ReadOnly="True" SortExpression="AchievementID" />
                 <asp:BoundField DataField="Sno" HeaderText="学号" SortExpression="Sno" />
                 <asp:BoundField DataField="RuleID" HeaderText="规则编号" SortExpression="RuleID" />
                 <asp:BoundField DataField="Mark" HeaderText="分值" SortExpression="Mark" />
@@ -152,6 +151,11 @@
                 <asp:TemplateField HeaderText="提交审核" ShowHeader="False">
                         <ItemTemplate>
                             <asp:LinkButton ID="AuditBtn" CausesValidation="false" runat="server" CommandName="AuditRecord" Text="提交审核"  CommandArgument='<%# Eval("AchievementID") %>'></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                 <asp:TemplateField HeaderText="下载附件" ShowHeader="False">
+                        <ItemTemplate>
+                               <asp:LinkButton ID="btnDown" CausesValidation="false" runat="server"  CommandName="Down" Text="下载附件"  CommandArgument='<%# Eval("AchievementID") %>'></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 <asp:TemplateField HeaderText="删除" ShowHeader="False">
@@ -217,6 +221,7 @@
                 </FooterTemplate>
                 <ContentCollection>
                     <dx:PopupControlContentControl ID="PopupControlContentControl3" runat="server" SupportsDisabledAttribute="True">
+                        <h2><asp:Label ID="LableText" runat="server" Text="完善社会工作信息" CssClass="texts"></asp:Label></h2>
                         <div class="buju">
                         <asp:Label ID="Label1" runat="server" Text="所属组织：" CssClass="texts"></asp:Label>
                         <asp:TextBox ID="Organization" runat="server" placeholder="管理学院" CssClass="auto-style2" Width="140px"></asp:TextBox>
@@ -225,8 +230,8 @@
                         <asp:TextBox ID="PositionType" runat="server" placeholder="学生会主席" CssClass="auto-style1" ></asp:TextBox>
                         
                         </div>
-                        <div class="buju"><asp:Label ID="Label3" runat="server" Text="项目分值" CssClass="texts"></asp:Label></div>
                         <br />
+                        <div class="buju>"><h2><asp:Label ID="LabelText1" runat="server" Text="项目分值" CssClass="texts"></asp:Label></h2></div>                    
                         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="RuleID" DataSourceID="SqlDataSourceRules" OnSelectedIndexChanged="Page_Load" CssClass="dataTable" Width="583px">
                             <AlternatingRowStyle CssClass="alternateRow" />
                             <Columns>
@@ -270,6 +275,15 @@
                                              <PagerStyle CssClass="pagerRow" />
                                             <SelectedRowStyle CssClass="selectedRow" />
                         </asp:GridView>
+                        <br />
+                         <div class="buju>"><h2><asp:Label ID="LabelText2" runat="server" Text="上传材料" CssClass="texts"></asp:Label></h2></div>      
+                         <div class="buju">
+                             <asp:FileUpload ID="fileUploader" runat="server"  AllowMultiple="True" ToolTip="请上传.jpg\.png格式附件，命名方式：学号+时间（19970917）+编号（自己定义，重复无效）" CssClass="auto-style1" BorderStyle="Inset" Height="20px" Width="65px" />
+                         
+                             <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton1_Click">上传</asp:LinkButton>
+                            <asp:Label ID="TextTip" runat="server" Text="请上传.jpg\.png格式附件，命名方式：学号+时间（19970917）+编号（自己定义，重复无效）" ForeColor="#990000" CssClass="buju"></asp:Label>
+                             <br /><br /><br />
+                        </div>
                     </dx:PopupControlContentControl>
                 </ContentCollection>
             </dx:ASPxPopupControl>
@@ -281,6 +295,8 @@
         </asp:SqlDataSource>
              <br />
              <uc1:MessageBoxControl ID="MsgBox" runat="server" />
+             <asp:HiddenField ID="HiddenField1" runat="server" />
+        
     </form>
    
 </body>

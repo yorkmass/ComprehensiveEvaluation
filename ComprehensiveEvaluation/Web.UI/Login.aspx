@@ -10,7 +10,62 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
+      <script type="text/javascript">
+    // 登录页面一定是顶层窗口，不嵌在IFrame中。
+    if (top.window != window)
+      top.window.location.href = "./Login.aspx";
+  </script>
+  <style type="text/css">
+    body {
+      margin: 0px;
+    }
+
+    img {
+      border-bottom: medium none;
+      border-left: medium none;
+      vertical-align: middle;
+      border-top: medium none;
+      border-right: medium none;
+    }
+
+    .wrapper {
+      background: url("images/login-bg.png") white repeat-x left top;
+    }
+
+    .header {
+      height: 258px;
+    }
+
+    .inner-header {
+      margin: 0 auto;
+      width: 95%;
+    }
+
+    .header .logo {
+      background-image: url('images/logo.png');
+      margin: 6px 0px;
+      width: 570px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      float: left;
+      height: 52px;
+      cursor: pointer;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+  </style>
+
 <body>
+      <div class="wrapper">
+    <div class="header">
+      <div class="inner-header">
+        <div id="logo" class="logo">
+        </div>
+      </div>
+    </div>
+  </div>
     <form id="form1" runat="server">
         <div>
             <dx:ASPxPopupControl ID="LoginPopup" runat="server" AllowDragging="True"

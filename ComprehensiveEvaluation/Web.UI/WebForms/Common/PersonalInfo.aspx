@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PersonalInfo.aspx.cs" Inherits="WebForms_Common_PersonalInfo" %>
-
+<%@ Register Src="../../script/MessageBoxControl.ascx" TagName="MessageBoxControl" TagPrefix="uc1" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -41,12 +41,12 @@
     margin-left:100px;
 }
     </style>
-
+<link href="../../css/style.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="location">
-            <asp:Label ID="ChangeInfoTitle" runat="server" Font-Underline="False" ForeColor="#0066FF" Text="个人信息修改" Font-Bold="True" Font-Size="Larger"></asp:Label>
+            <h2><asp:Label ID="ChangeInfoTitle" runat="server" Font-Underline="False"  Text="个人信息修改" ></asp:Label></h2>
         </div>
         <div class="double">
             <div class="left">
@@ -69,6 +69,7 @@
         <asp:Button ID="Button1" runat="server" Text="确认修改" OnClick="ConfirmClick" BorderStyle="Groove" />
         <asp:Button ID="Button2" runat="server" CssClass="buttonClear"  width="78px" Text="清空" OnClick="ClearClick" BorderStyle="Groove" />
         </div>
+        <uc1:MessageBoxControl ID="MsgBox" runat="server" />
     </form>
 </body>
 </html>
